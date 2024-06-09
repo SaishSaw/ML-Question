@@ -1,0 +1,5 @@
+scikit-learn
+plotly
+sentence_transformer
+pandas
+numpy

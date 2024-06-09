@@ -1,0 +1,13 @@
+As part of assignment I have decided to create a timeline plots for the news articles.
+
+
+Beginning with the assignment, I have converted the json file into dataframe. After converting the file into dataframe I have
+conducted basic data preprocessing like cleaning the NAN values present in the date feature. Removing duplicates to ensure we have 
+unique title and dates.
+The dates columns needed some cleaning . I have extracted only the datetime part to ensure that the columns has only date of the event happening.
+After preprocessing, I have used sentence transformer to convert the title into word embeddings. 
+For model training, we created batches of data to ensure the fast and efficient model training.
+Finally I have used dbscan to cluster the documents together which possess some similarity. I have used dbscan because of its spatial 
+nature. The embeddings for sentence with similar meanings will be closed to each other .
+After implementing dbscan we selected relevant articles for the date, where embeddings are closer to the cluster centers.
+Exporting this data into dataframe, timeline chart was plotted using plotly graph objects.
